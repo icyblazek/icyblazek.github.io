@@ -9,7 +9,8 @@
   <meta name="author" content="Kevin">
 
   
-  <meta name="description" content=" Archives 我的Mac程序世界 Mac/iOS Home Archives About Feed Recent Posts ">
+  <meta name="description" content="Mac上最简单安装v8的方法就是直接使用HomeBrew即可（不知道brew的去面壁半小时间，再去Google） brew install v8 安装完成后，到HomeBrew工作目录/usr/local/Cellar/v8/一看，版本还是3.25.30…
+作为我这等有强迫症程序猿， &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -29,9 +30,9 @@
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
 <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
-<link href='http://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Lora:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:200,300,400,500,600,700,900' rel='stylesheet' type='text/css'>
+<link href='/stylesheets/webfont1.css' rel='stylesheet' type='text/css'>
+<link href='/stylesheets/webfont2.css' type='text/css'>
+<link href='/stylesheets/webfont3.css' rel='stylesheet' type='text/css'>
 
 
 	<!-- mathjax config similar to math.stackexchange -->
@@ -69,8 +70,6 @@
 
 
 
-  
-
   <style>html{background: url(/images/background.png) no-repeat center center fixed;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;}</style>
 </head>
 
@@ -84,6 +83,53 @@
       <div class="blog-index">
   
   
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2015/01/27/setup-v8-on-mac/">在Mac上使用XCode来编绎v8</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-01-27T13:46:18+08:00" pubdate data-updated="true"></time>
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Mac上最简单安装v8的方法就是直接使用<a href="http://brew.sh">HomeBrew</a>即可（不知道brew的去面壁半小时间，再去Google）</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">brew install v8</code></pre></div>
+
+<p>安装完成后，到HomeBrew工作目录/usr/local/Cellar/v8/一看，版本还是3.25.30…<br />
+作为我这等有强迫症程序猿，怎能不用最新的呢，再说你看前段时间node.js分裂出来的io.js，里面不就有人说怎么还没更新到最新的v8呢，所以你看就有了io.js了吧，当然这没有太大关系，哈哈，所以我们今天的主题就是如何在Mac上使用XCode来编绎最新的v8，基于4.x.x以上的版本</p>
+
+<p><a href="https://code.google.com/p/v8-wiki/wiki/BuildingWithGYP">https://code.google.com/p/v8-wiki/wiki/BuildingWithGYP</a><br />
+相信很多人都看过这个向导了，按道理是应该非常简单就可以编绎通过的，但还是蛋疼了一番，基本上都是按向导来做，但还是通不过（不知道官方测试过没有），最后整理了一下编绎过程
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2015/01/27/setup-v8-on-mac/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
   <div class="pagination">
     
     <a href="/blog/archives/"> Archives </a>
@@ -93,7 +139,7 @@
 <aside class="sidebar">
   
     <section id="titles">
-  <a href="http://icyblazek.github.io" title="我的Mac程序世界"><img id="logo" src="http://icyblazek.github.io/images/" /></a>
+  <a href="http://icyblazek.github.io" title="我的Mac程序世界"></a>
   <h1 id="site_title"><a href="http://icyblazek.github.io" title="我的Mac程序世界">我的Mac程序世界</a></h1>
   <h3 id="site_subtitle">Mac/iOS</h3>
 </section>
@@ -102,31 +148,28 @@
   <ul>
     <li><i class="fa fa-home fa-lg"></i><a href="http://icyblazek.github.io"> Home </a></li>
     <li><i class="fa fa-calendar fa-lg"></i><a href="http://icyblazek.github.io/blog/archives/"> Archives </a></li>
-    <li><i class="fa fa-user fa-lg"></i><a href="http://icyblazek.github.io/about/"> About </a></li>
     <li><i class="fa fa-rss fa-lg"></i><a href="http://icyblazek.github.io/atom.xml"> Feed </a></li>
   </ul>
 </section>
-
-<section id="social">
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-</section>
-
 
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
     
+      <li class="post">
+        <a href="/blog/2015/01/27/setup-v8-on-mac/">在Mac上使用XCode来编绎v8</a>
+      </li>
+    
   </ul>
+</section>
+<section>
+  <h1>About Me</h1>
+  <p> Mac/iOS开发者, 创业者, Blogger<br>
+      <br>新浪微博: <a href="http://weibo.com/icyblazek" target="_blank">Icyblaze_K</a>
+      <span id="wb_follow_btn"></span>
+      <br>我的<strong>“Mac程序世界”</strong>微信公众账号:
+      <br><img width="220px" src="/images/qrcode.jpg">
+  </p>
 </section>
 
 
@@ -145,25 +188,6 @@
 
 </footer>
   
-
-
-
-
-
-
-
-  <script type="text/javascript">
-    (function(){
-      var twitterWidgets = document.createElement('script');
-      twitterWidgets.type = 'text/javascript';
-      twitterWidgets.async = true;
-      twitterWidgets.src = '//platform.twitter.com/widgets.js';
-      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
-    })();
-  </script>
-
-
-
 
 
 </body>

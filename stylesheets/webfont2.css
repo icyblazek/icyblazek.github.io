@@ -1,0 +1,24 @@
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lora'), local('Lora-Regular'), url(http://fonts.gstatic.com/s/lora/v9/MVabO2jbLZ8M0pzO6jqg2fesZW2xOQ-xsNqO47m55DA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lora Bold'), local('Lora-Bold'), url(http://fonts.gstatic.com/s/lora/v9/edZGhwcGSa4b_oDBoG_VLgLUuEpTyoUstqEm5AMlJo4.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Lora Italic'), local('Lora-Italic'), url(http://fonts.gstatic.com/s/lora/v9/5Ay4Lbc6l_v4RrGh5wBv6evvDin1pK8aKteLpeZ5c0A.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Lora Bold Italic'), local('Lora-BoldItalic'), url(http://fonts.gstatic.com/s/lora/v9/_IxjUs2lbQSu0MyFEAfa7SZ2oysoEQEeKwjgmXLRnTc.ttf) format('truetype');
+}

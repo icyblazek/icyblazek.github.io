@@ -1,24 +1,113 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[我的Mac程序世界]]></title>
-  <link href="http://icyblazek.github.io/atom.xml" rel="self"/>
-  <link href="http://icyblazek.github.io/"/>
-  <updated>2015-01-28T22:03:29+08:00</updated>
-  <id>http://icyblazek.github.io/</id>
-  <author>
-    <name><![CDATA[Kevin]]></name>
-    
-  </author>
-  <generator uri="http://octopress.org/">Octopress</generator>
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>在Mac上使用XCode来编绎v8 - 我的Mac程序世界</title>
+  <meta name="author" content="Kevin">
 
   
-  <entry>
-    <title type="html"><![CDATA[在Mac上使用XCode来编绎v8]]></title>
-    <link href="http://icyblazek.github.io/blog/2015/01/27/setup-v8-on-mac/"/>
-    <updated>2015-01-27T13:46:18+08:00</updated>
-    <id>http://icyblazek.github.io/blog/2015/01/27/setup-v8-on-mac</id>
-    <content type="html"><![CDATA[<p>Mac上最简单安装v8的方法就是直接使用<a href="http://brew.sh">HomeBrew</a>即可（不知道brew的去面壁半小时间，再去Google）</p>
+  <meta name="description" content="Mac上最简单安装v8的方法就是直接使用HomeBrew即可（不知道brew的去面壁半小时间，再去Google） brew install v8 安装完成后，到HomeBrew工作目录/usr/local/Cellar/v8/一看，版本还是3.25.30…
+作为我这等有强迫症程序猿， &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://icyblazek.github.io/blog/2015/01/27/setup-v8-on-mac/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+   <link href="/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="我的Mac程序世界" type="application/atom+xml">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href='/stylesheets/webfont1.css' rel='stylesheet' type='text/css'>
+<link href='/stylesheets/webfont2.css' type='text/css'>
+<link href='/stylesheets/webfont3.css' rel='stylesheet' type='text/css'>
+
+
+	<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$$','$$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+
+  <style>html{background: url(/images/background.png) no-repeat center center fixed;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;}</style>
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+</hgroup>
+
+</header>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">在Mac上使用XCode来编绎v8</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-01-27T13:46:18+08:00" pubdate data-updated="true"></time>
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Mac上最简单安装v8的方法就是直接使用<a href="http://brew.sh">HomeBrew</a>即可（不知道brew的去面壁半小时间，再去Google）</p>
 
 <div class="highlight"><pre><code class="language-bash" data-lang="bash">brew install v8</code></pre></div>
 
@@ -130,7 +219,116 @@ Command /usr/bin/clang failed with <span class="nb">exit </span>code 1</code></p
 
 <p>编绎上面代码前，先修改一下XCode编绎参数，LLVM 6.0默认使用的LLVM C++ Standard Library，而v8依赖的是GNU C++标准库，所以最后把libc++改成libstdc++吧。</p>
 
-]]></content>
-  </entry>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
   
-</feed>
+
+<span class="byline author vcard">Posted by <span class="fn">Kevin</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-01-27T13:46:18+08:00" pubdate data-updated="true"></time>
+      
+
+
+    </p>
+    <p class="meta">
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+   <!-- 多说评论框 start -->
+<div class="ds-thread" data-thread-key="/blog/2015/01/27/setup-v8-on-mac" data-title="在Mac上使用XCode来编绎v8" data-url="http://icyblazek.github.io/blog/2015/01/27/setup-v8-on-mac/"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    var duoshuoQuery = {short_name:"icyblazek"};
+    (function() {
+
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0]
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+     })();
+ </script>
+ <!-- 多说公共JS代码 end -->
+  </section>
+ 
+</div>
+
+<aside class="sidebar">
+  
+    <section id="titles">
+  <a href="http://icyblazek.github.io" title="我的Mac程序世界"></a>
+  <h1 id="site_title"><a href="http://icyblazek.github.io" title="我的Mac程序世界">我的Mac程序世界</a></h1>
+  <h3 id="site_subtitle">Mac/iOS</h3>
+</section>
+
+<section id="menu">
+  <ul>
+    <li><i class="fa fa-home fa-lg"></i><a href="http://icyblazek.github.io"> Home </a></li>
+    <li><i class="fa fa-calendar fa-lg"></i><a href="http://icyblazek.github.io/blog/archives/"> Archives </a></li>
+    <li><i class="fa fa-rss fa-lg"></i><a href="http://icyblazek.github.io/atom.xml"> Feed </a></li>
+  </ul>
+</section>
+
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2015/01/27/setup-v8-on-mac/">在Mac上使用XCode来编绎v8</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+  <h1>About Me</h1>
+  <p> Mac/iOS开发者, 创业者, Blogger<br>
+      <br>新浪微博: <a href="http://weibo.com/icyblazek" target="_blank">Icyblaze_K</a>
+      <span id="wb_follow_btn"></span>
+      <br>我的<strong>“Mac程序世界”</strong>微信公众账号:
+      <br><img width="220px" src="/images/qrcode.jpg">
+  </p>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2015 - Kevin -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+</body>
+</html>
