@@ -4,7 +4,7 @@
   <title><![CDATA[我的Mac程序世界]]></title>
   <link href="http://icyblazek.github.io/atom.xml" rel="self"/>
   <link href="http://icyblazek.github.io/"/>
-  <updated>2015-01-28T22:33:48+08:00</updated>
+  <updated>2015-01-28T22:34:51+08:00</updated>
   <id>http://icyblazek.github.io/</id>
   <author>
     <name><![CDATA[Kevin]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[在Mac上使用XCode来编绎v8]]></title>
-    <link href="http://icyblazek.github.io/blog/2015/01/27/setup-v8-on-mac/"/>
-    <updated>2015-01-27T13:46:18+08:00</updated>
-    <id>http://icyblazek.github.io/blog/2015/01/27/setup-v8-on-mac</id>
+    <link href="http://icyblazek.github.io/blog/2015/01/28/setup-v8-on-mac/"/>
+    <updated>2015-01-28T22:00:18+08:00</updated>
+    <id>http://icyblazek.github.io/blog/2015/01/28/setup-v8-on-mac</id>
     <content type="html"><![CDATA[<p>Mac上最简单安装v8的方法就是直接使用<a href="http://brew.sh">HomeBrew</a>即可（不知道brew的去面壁半小时间，再去Google）</p>
 
 <div class="highlight"><pre><code class="language-bash" data-lang="bash">brew install v8</code></pre></div>
