@@ -4,7 +4,7 @@
   <title><![CDATA[我的Mac程序世界]]></title>
   <link href="http://icyblazek.github.io/atom.xml" rel="self"/>
   <link href="http://icyblazek.github.io/"/>
-  <updated>2015-01-28T22:03:29+08:00</updated>
+  <updated>2015-01-28T22:13:09+08:00</updated>
   <id>http://icyblazek.github.io/</id>
   <author>
     <name><![CDATA[Kevin]]></name>
@@ -129,6 +129,8 @@ Command /usr/bin/clang failed with <span class="nb">exit </span>code 1</code></p
 <span class="p">}</span></code></pre></div>
 
 <p>编绎上面代码前，先修改一下XCode编绎参数，LLVM 6.0默认使用的LLVM C++ Standard Library，而v8依赖的是GNU C++标准库，所以最后把libc++改成libstdc++吧。</p>
+
+<p>过两天会写一篇v8基础入门的文章。</p>
 
 ]]></content>
   </entry>
