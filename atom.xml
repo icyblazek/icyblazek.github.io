@@ -4,7 +4,7 @@
   <title><![CDATA[我的Mac程序世界]]></title>
   <link href="http://icyblazek.github.io/atom.xml" rel="self"/>
   <link href="http://icyblazek.github.io/"/>
-  <updated>2015-01-28T22:29:27+08:00</updated>
+  <updated>2015-01-28T22:33:48+08:00</updated>
   <id>http://icyblazek.github.io/</id>
   <author>
     <name><![CDATA[Kevin]]></name>
@@ -126,8 +126,8 @@ Command /usr/bin/clang failed with <span class="nb">exit </span>code 1</code></p
     <span class="n">v8</span><span class="o">::</span><span class="n">Handle</span><span class="o">&lt;</span><span class="n">Context</span><span class="o">&gt;</span> <span class="n">context</span> <span class="o">=</span> <span class="n">v8</span><span class="o">::</span><span class="n">Context</span><span class="o">::</span><span class="n">New</span><span class="p">(</span><span class="n">isolate</span><span class="p">);</span>
     <span class="n">v8</span><span class="o">::</span><span class="n">Context</span><span class="o">::</span><span class="n">Scope</span> <span class="n">context_scope</span><span class="p">(</span><span class="n">context</span><span class="p">);</span>
     <span class="n">v8</span><span class="o">::</span><span class="n">Local</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">source</span> <span class="o">=</span> <span class="n">v8</span><span class="o">::</span><span class="n">String</span><span class="o">::</span><span class="n">NewFromUtf8</span><span class="p">(</span><span class="n">isolate</span><span class="p">,</span> <span class="s">&quot;&#39;Hello&#39; + &#39;, World!&#39;&quot;</span><span class="p">);</span>
-    <span class="n">Handle</span><span class="o">&lt;</span><span class="n">Script</span><span class="o">&gt;</span> <span class="n">script</span> <span class="o">=</span> <span class="n">v8</span><span class="o">::</span><span class="n">Script</span><span class="o">::</span><span class="n">Compile</span><span class="p">(</span><span class="n">source</span><span class="p">);</span>
-    <span class="n">Handle</span><span class="o">&lt;</span><span class="n">Value</span><span class="o">&gt;</span> <span class="n">result</span> <span class="o">=</span> <span class="n">script</span><span class="o">-&gt;</span><span class="n">Run</span><span class="p">();</span>
+    <span class="n">v8</span><span class="o">::</span><span class="n">Script</span><span class="o">::</span><span class="n">Handle</span><span class="o">&lt;</span><span class="n">Script</span><span class="o">&gt;</span> <span class="n">script</span> <span class="o">=</span> <span class="n">v8</span><span class="o">::</span><span class="n">Script</span><span class="o">::</span><span class="n">Compile</span><span class="p">(</span><span class="n">source</span><span class="p">);</span>
+    <span class="n">v8</span><span class="o">::</span><span class="n">Handle</span><span class="o">&lt;</span><span class="n">Value</span><span class="o">&gt;</span> <span class="n">result</span> <span class="o">=</span> <span class="n">script</span><span class="o">-&gt;</span><span class="n">Run</span><span class="p">();</span>
     <span class="n">v8</span><span class="o">::</span><span class="n">String</span><span class="o">::</span><span class="n">Utf8Value</span> <span class="n">utf8</span><span class="p">(</span><span class="n">result</span><span class="p">);</span>
     <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="o">*</span><span class="n">utf8</span><span class="p">);</span>
     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
