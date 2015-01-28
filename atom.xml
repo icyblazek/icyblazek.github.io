@@ -4,7 +4,7 @@
   <title><![CDATA[我的Mac程序世界]]></title>
   <link href="http://icyblazek.github.io/atom.xml" rel="self"/>
   <link href="http://icyblazek.github.io/"/>
-  <updated>2015-01-28T22:13:09+08:00</updated>
+  <updated>2015-01-28T22:29:27+08:00</updated>
   <id>http://icyblazek.github.io/</id>
   <author>
     <name><![CDATA[Kevin]]></name>
@@ -102,9 +102,14 @@ gyp: /Users/Kevin/Desktop/v8/v8 copy/third_party/icu/icu.gyp not found <span cla
 clang: error: no input files
 Command /usr/bin/clang failed with <span class="nb">exit </span>code 1</code></pre></div>
 
-<p>打开all.xcodeproj，找到gmock工程，发现竟然有些源代码文件引用失效，而且还有gtest工程也有些源代码文件引用失效，我修复后，再通过上面的命令终于编绎成功了，生成的静态库在v8/xcodebuild目录下面。</p>
+<p>打开all.xcodeproj，找到gmock工程，发现竟然有些源代码文件引用失效，而且还有gtest工程也有些源代码文件引用失效  </p>
 
-<p>后面我发现其实不用编绎整个工程，那样太慢，直接编绎v8 target就可以了，基本上都能成功的，把编绎好的静态库Copy到你工作目录就可以使用了</p>
+<p><img src="http://icyblazek.github.io/images/blog_content/gmock_miss_src.png" alt="gmock-miss_src" />
+<img src="http://icyblazek.github.io/images/blog_content/gtest_miss_src.png" alt="gtest_miss_src" />  </p>
+
+<p>我修复后，再通过上面的命令终于编绎成功了，生成的静态库在v8/xcodebuild目录下面。</p>
+
+<p>后面我发现其实不用编绎整个工程，那样太慢，直接编绎v8 target就可以了，基本上都能成功的，把编绎好的静态库和头文件Copy到你工作目录就可以使用了</p>
 
 <p>写个简单的例子，网上很多教程都是这个例子但在新版里面，需要加上这两行初始化代码，才能正常执行</p>
 
